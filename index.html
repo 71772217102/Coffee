@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Ordering System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1><a href="#">Coffee</a></h1>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menuid">Menu</a>
+            <a href="#product">products</a>
+            <a href="#review">Review</a>
+            <a href="#con">Contact</a>
+            <a href="#box">Login</a>
+        </nav>
+
+
+        <div class="icons">
+            <button id="search-btn"><img src="file:///D:/Frontend/coffee-shop/images/search-icon.png" height="50px"
+                    width="50"></button>
+            <button id="cart-btn"><img src="file:///D:/Frontend/coffee-shop/images/cart-icon.avif" height="50px"
+                    width="50px"></button>
+            <button id="menu-btn"><img src="file:///D:/Frontend/coffee-shop/images/menu-icon.jpg" height="50px"
+                    width="50px"></button>
+        </div>
+        
+    </header>
+     <!-- Popup Message for Payment -->
+     <div id="payment-message" style="display: none;">Payment is successful!</div>
+     
+    <div class="home-sec" id="home">
+        <h1>Where Every Sip is a Moment of Pure Bliss!</h1>
+        <p>Welcome to our coffee shop! Here, we make every cup with care to give you the best coffee experience.<br> We
+            offer a range of delicious coffee options, made from fresh beans, <br>so you can find the perfect drink to
+            match
+            your taste.<br> Whether you’re in a hurry or want to relax in a cozy space, we’re here for you. <br>Our
+            friendly
+            team is ready to serve you and make your day better with a great cup of coffee.</p>
+        <a href="#menuid"><button>Get it now</button></a>
+    </div>
+
+   
+
+    <div class="about-sec" id="about">
+        <img src="file:///D:/Frontend/coffee-shop/images/about image.jpg" height="400px" width="600px">
+        <div class="in">
+            <h1>ABOUT US</h1>
+            <h2>What Makes Our Coffee Special</h2>
+            <p>Our coffee is more than just a drink, it’s made to be enjoyed. Here’s what makes it special:<br><br>
+
+                Fresh Beans: We use only the freshest coffee beans to give you the best flavor in every cup.<br><br>
+
+                Made with Care: Our skilled baristas craft each cup with attention to detail, making sure it's perfect
+                for
+                you.<br><br>
+
+                High-Quality Ingredients: We use top-quality ingredients to bring out the rich, natural taste of our
+                coffee.<br><br>
+
+                Just the Way You Like It: Whether you want it strong, light, hot, or cold, we make your coffee exactly
+                how
+                you prefer.<br><br>
+
+                Ethical and Sustainable: Our beans come from farms that care about the environment and fair practices.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="cart" id="cart">
+        <h2>Cart</h2>
+        <div id="cart-items">No items in cart</div>
+        <h3 id="total-price">Total: $0.00</h3> <!-- Total Price -->
+        <button id="payment-button" style="display: none;">Proceed to Payment</button>
+    </div>
+
+    <!-- Popup Message -->
+    <div id="popup-message"
+        style="display: none; position: fixed; top: 20px; right: 20px; background: white; color: white; padding: 10px; border-radius: 5px;">
+        Item added to cart!</div>
+
+
+    <div class="menu-sec" id="menuid">
+        <h1> OUR MENU</h1>
+        <div class="menu1">
+            <div class="menu">
+                <img src="file:///D:/Frontend/coffee-shop/images/blackcoffee-menu1.jpg" height="250px" width="250px">
+                <h3>Black Coffee</h3>
+                <h4>$89.00</h4>
+                <button class="add-to-cart" data-name="Black Coffee" data-price="89"
+                    data-image="file:///D:/Frontend/coffee-shop/images/blackcoffee-menu1.jpg">Add to cart</button>
+            </div>
+
+            <div class="menu">
+                <img src="file:///D:/Frontend/coffee-shop/images/espresso-menu2.jpg" height="250px" width="250px">
+                <h3>Espresso</h3>
+                <h4>$208.00</h4>
+                <button class="add-to-cart" data-name="Espresso" data-price="208"
+                    data-image="file:///D:/Frontend/coffee-shop/images/espresso-menu2.jpg">Add to cart</button>
+            </div>
+
+            <div class="menu">
+                <img src="file:///D:/Frontend/coffee-shop/images/mocha-menu3.jpg" height="250px" width="250px">
+                <h3>Mocha</h3>
+                <h4>$98.00</h4>
+                <button class="add-to-cart" data-name="Mocha" data-price="98"
+                    data-image="file:///D:/Frontend/coffee-shop/images/mocha-menu3.jpg">Add to cart</button>
+            </div>
+        </div>
+        <div class="menu2">
+            <div class="menu">
+                <img src="file:///D:/Frontend/coffee-shop/images/iced coffee-menu4.jpg" height="250px" width="250px">
+                <h3>Iced Coffee</h3>
+                <h4>$125.00</h4>
+                <button class="add-to-cart" data-name="Iced Coffee" data-price="125"
+                    data-image="file:///D:/Frontend/coffee-shop/images/iced coffee-menu4.jpg">Add to cart</button>
+            </div>
+
+            <div class="menu">
+                <img src="file:///D:/Frontend/coffee-shop/images/ristretto-menu5.jpg" height="250px" width="250px">
+                <h3>Ristretto</h3>
+                <h4>$209.00</h4>
+                <button class="add-to-cart" data-name="Ristretto" data-price="209"
+                    data-image="file:///D:/Frontend/coffee-shop/images/ristretto-menu5.jpg">Add to cart</button>
+            </div>
+
+            <div class="menu">
+                <img src="file:///D:/Frontend/coffee-shop/images/flat white-menu6.jpg" height="250px" width="250px">
+                <h3>Flat white</h3>
+                <h4>$283.00</h4>
+                <button class="add-to-cart" data-name="Flat White" data-price="283"
+                    data-image="file:///D:/Frontend/coffee-shop/images/flat white-menu6.jpg">Add to cart</button>
+            </div>
+        </div>
+    </div>
+    <!-- Customization Modal -->
+    <div id="customization-modal" style="display: none;">
+        <h1>Customize Your Drink</h1>
+        <label for="milk-type" class="l1">Select Milk Type:</label>
+        <select id="milk-type">
+            <option value="Whole Milk">Whole Milk</option>
+            <option value="Skim Milk">Skim Milk</option>
+            <option value="Almond Milk">Almond Milk</option>
+            <option value="Oat Milk">Oat Milk</option>
+        </select><br>
+
+        <label for="sugar-level" class="l2">Sugar Level:</label>
+        <select id="sugar-level">
+            <option value="No Sugar">No Sugar</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select><br>
+
+        <button id="confirm-customization">Confirm</button><br>
+        <button id="cancel-customization">Cancel</button>
+    </div>
+
+
+
+    <div class="product-sec" id="product">
+        <h1>LATEST PRODUCTS</h1>
+        <div class="p1">
+            <div class="pro">
+                <img src="file:///D:/Frontend/coffee-shop/images/product1.jpg" height="300px" width="300px">
+                <h3>Iced hazeInut Oatmilk Shaken Espresso</h3>
+                <h4>$125.00</h4>
+            </div>
+
+            <div class="pro">
+                <img src="file:///D:/Frontend/coffee-shop/images/products2.jpg" height="300px" width="300px">
+                <h3>Pistachio Cream Cold Brew</h3>
+                <h4>435.00</h4>
+            </div>
+
+
+            <div class="pro">
+                <img src="file:///D:/Frontend/coffee-shop/images/product3.jpg" height="300px" width="300px">
+                <h3>Sea Salted Caramelactic Shaken Espresso</h3>
+                <h4>$265.00</h4>
+            </div>
+
+            <div class="pro">
+                <img src="file:///D:/Frontend/coffee-shop/images/product4.jpg" height="300px" width="300px">
+                <h3>French Toast Galaxy Iced Latte</h3>
+                <h4>$356.00</h4>
+
+            </div>
+        </div>
+
+        <div class="review-sec" id="review">
+            <h1>CUSTOMER REVIEW</h1>
+            <div class="customer">
+                <p>"I absolutely love this coffee shop! The coffee is always fresh and flavorful, and you can really
+                    taste
+                    the quality in every cup. The staff is super friendly and always makes me feel welcome, whether I’m
+                    grabbing a quick drink or sitting down to relax. I also love how they have so many options, so I can
+                    try
+                    something new every time I visit. The cozy atmosphere is perfect for catching up with friends or
+                    just
+                    enjoying a quiet moment with a great cup of coffee. Highly recommend!"</p>
+                <img src="file:///D:/Frontend/coffee-shop/images/c1.jpg" height="150px" width="200px"><br>
+                <div class="star-rating">
+                    <span class="star" data-value="5">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="1">&#9733;</span>
+                </div>
+                <h3 class="rating-value">Rating: 0/5</h3>
+
+            </div>
+
+            <div class="customer">
+                <p>"I absolutely love this coffee shop! The coffee is always fresh and flavorful, and you can really
+                    taste
+                    the quality in every cup. The staff is super friendly and always makes me feel welcome, whether I’m
+                    grabbing a quick drink or sitting down to relax. I also love how they have so many options, so I can
+                    try
+                    something new every time I visit. The cozy atmosphere is perfect for catching up with friends or
+                    just
+                    enjoying a quiet moment with a great cup of coffee. Highly recommend!"</p>
+                <img src="file:///D:/Frontend/coffee-shop/images/c2.jpg" height="150px" width="200px"><br>
+                <div class="star-rating">
+                    <span class="star" data-value="5">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="1">&#9733;</span>
+                </div>
+                <h3 class="rating-value">Rating: 0/5</h3>
+
+            </div>
+
+
+            <div class="customer">
+                <p>"I absolutely love this coffee shop! The coffee is always fresh and flavorful, and you can really
+                    taste the
+                    quality in every cup. The staff is super friendly and always makes me feel welcome, whether I’m
+                    grabbing a
+                    quick drink or sitting down to relax. I also love how they have so many options, so I can try
+                    something new
+                    every time I visit. The cozy atmosphere is perfect for catching up with friends or just enjoying a
+                    quiet
+                    moment with a great cup of coffee. Highly recommend!"</p>
+                <img src="file:///D:/Frontend/coffee-shop/images/c3.jpg" height="150px" width="200px"><br>
+                <div class="star-rating">
+                    <span class="star" data-value="5">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="1">&#9733;</span>
+                </div>
+                <h3 class="rating-value">Rating: 0/5</h3>
+
+            </div>
+        </div>
+        
+        <div id="box">
+             <div class="form">
+                <h1>LOGIN FORM</h1>
+                <form>
+                    <div class="inputbox">
+                         <input type="text" value="" id="username" required  placeholder="Username">
+                    </div>
+                    <div class="inputbox">
+                       <input type="text" value="" id="email" required placeholder="Email" >
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" value="" id="phone" required placeholder="Phone NUmber">
+                    </div>
+                    <input type="submit" value="submit" class="sub" id="submit">
+                </form>
+             </div>
+        </div>
+        
+        <div class="contact-sec" id="con">
+             <h1>CONTACT US</h1><br>
+             <form>
+                <input type="text" placeholder="Name"><br>
+                <input type="email" placeholder="email"><br>
+                <input type="number" placeholder="Number"><br>
+                <button>Contact Now</button>
+            </form>
+
+            <div class="my-con">
+                <img src="file:///D:/Frontend/coffee-shop/images/linkedin-logo.png" height="70px" width="70px">
+                <img src="file:///D:/Frontend/coffee-shop/images/email-logo.png" height="70px" width="70px">
+                <img src="file:///D:/Frontend/coffee-shop/images/github2.jpg" height="70px" width="70px">
+                <h3>&copy; 2024 Abarna.All Rights Reserved</h3>
+            </div>
+        </div>
+
+       
+
+  <script type="module">
+    
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+    import { getDatabase,ref,set,get,child } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
+   
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCoKRArr-1ddOY4mCCi7BsHNbTfVSVnLB4",
+      authDomain: "c0ffee-shop.firebaseapp.com",
+      projectId: "c0ffee-shop",
+      storageBucket: "c0ffee-shop.appspot.com",
+      messagingSenderId: "1075582832938",
+      appId: "1:1075582832938:web:b12f24702dbd544ab60e53"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    const db = getDatabase(app);
+document.getElementById("submit").addEventListener("click",function(e){
+    set(ref(db, 'user/' + document.getElementById("username").value),
+{
+    username:document.getElementById("username").value,
+    email:document.getElementById("email").value,
+    PhoneNumber:document.getElementById("phone").value
+})
+alert("Login sucessfull !");
+})
+
+  </script>
+        
+
+        <script src="script.js"></script>
+
+</body>
+
+</html>

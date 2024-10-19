@@ -1,0 +1,513 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    max-width: 100%;
+}
+
+
+body{
+    overflow-x: hidden;
+    background-color: black;
+}
+.cart {
+    display: none; 
+    border: 1px solid #ccc;
+    padding: 40px;
+    position: absolute;
+    top: 90px;
+    right: 20px; 
+    background-color:rgb(244, 109, 131);
+    
+}
+.cart h2,#cart-items,#total-price,#payment-button{
+    margin-top: 20px;
+}
+.cart #payment-button{
+    background-color: chartreuse;
+    padding: 10px;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+.cart #payment-button:hover{
+    background-color: green;
+    color:white;
+}
+
+.cart-item img {
+    margin-right: 10px;
+}
+#payment-message{
+    color:white;
+    font-size: 25px;
+    font-weight: bolder;
+    background-color: aqua;
+    position:relative;
+    top:40%;
+    right:40%;
+}
+
+#customization-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 40px;
+    border: 2px solid black;
+    z-index: 1000;
+    text-align: center;
+    width:500px;
+    height: 280px;
+}
+#customization-modal .l1{
+    position: relative;
+    top:20px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+#customization-modal #milk-type{
+    padding: 8px;
+    position: relative;
+    top:20px;
+    font-weight: bolder;
+}
+#customization-modal .l2{
+    position: relative;
+    top:40px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+#customization-modal #sugar-level{
+    padding: 8px;
+    position: relative;
+    top:40px;
+    font-weight: bolder;
+}
+#customization-modal button{
+    width:150px;
+    padding: 10px;
+}
+#customization-modal #confirm-customization{
+    font-size: 20px;
+    margin-top: 70px;
+    font-weight: bolder;
+    border-radius: 5px;
+    background-color: darkred;
+    color:white;
+}
+#customization-modal #cancel-customization{
+    font-size: 20px;
+    margin-top: 30px;
+    font-weight: bolder;
+    border-radius: 5px;
+    background-color: darkred;
+    color:white;
+}
+#customization-modal {
+    background-color: pink;
+}
+option{
+    font-weight: bolder;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove-item {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: red;
+}
+
+.star-rating {
+    display: inline-block;
+    font-size: 30px;
+    color: lightgray; 
+    cursor: pointer;
+}
+
+.star-rating .star:hover,
+.star-rating .star:hover ~ .star {
+    color: gold; 
+}
+
+.star-rating .selected {
+    color: gold; 
+}
+
+.rating-value {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+
+
+header{
+    display:flex;
+    background-color: black;
+    justify-content: space-between;
+    position:fixed;
+    width:100%;
+    top:0px;
+    left:0px;
+    right:0px;
+    z-index: 100000;
+    padding: 10px;
+}
+
+header h1 a{
+  position: relative;
+  text-decoration: none;
+  color:white;
+ margin-left: 30px;
+}
+.header h1{
+    margin-top: 15px;
+}
+header a:hover{
+    color:rgb(183, 132, 5);
+}
+
+nav{
+    position: relative;
+    left:16%;
+}
+nav a{
+    position: relative;
+    text-decoration: none;
+    font-size: 25px;
+    color:aliceblue;
+    margin-left: 20px;
+    top:25px;
+    font-weight: bold;
+}
+
+.icons button{
+    padding:0px 0px;
+    border:none;
+    background-color: black;
+    margin-top: 10px;
+}
+
+.home-sec{
+    position: relative;
+    background-image: url("file:///D:/Frontend/coffee-shop/images/coffee1.jpg");
+    height: 100vh;
+    width:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top:0px;
+}
+
+.home-sec h1{
+    position:relative;
+    color:rgb(183, 132, 5);
+   top:30%;
+   left:30px;
+   font-size: 35px;
+}
+.home-sec p{
+    color:white;
+    position: relative;
+    top:35%;
+    left:30px;
+    font-size: 18px;
+}
+.home-sec p:hover{
+    color: grey;
+}
+.home-sec a button{
+    padding:10px;
+    position: relative;
+    top:40%;
+    width:100px;
+    left:30px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgb(183, 132, 5);
+    border-radius: 5px;
+}
+
+.home-sec a button:hover{
+    font-size: 20px;
+    width:180px;
+    cursor: pointer;
+    background-color: rgb(144, 104, 2);
+    color:white;
+}
+
+.about-sec{
+    height:100vh;
+    
+}
+.about-sec img{
+    position:relative;
+    top:170px;
+    left:25px;
+    border:1px solid white;
+    background-color:black;
+   
+}
+.about-sec img:hover{
+    padding:15px;
+    background-color:rgb(190, 188, 188);
+    cursor:pointer;
+    height:420px;
+    width:620px;
+    transition: 3s;
+}
+.about-sec .in{
+position: relative;
+left:49%;
+bottom:30%;
+}
+.about-sec h1{
+margin-bottom: 50px;
+color:rgb(183, 132, 5);
+}
+.about-sec h2{
+    margin-bottom: 30px;
+    color:white;
+}
+.about-sec h2:hover{
+   color:rgb(126, 123, 123);
+
+}
+.about-sec p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:white;
+}
+
+.about-sec p:hover{
+    color: rgb(183, 132, 5);
+}
+
+.menu-sec{
+   
+    height: 200vh;
+}
+.menu-sec h1{
+    position:relative;
+    top:10%;
+    text-align: center;
+    color:rgb(183, 132, 5);
+}
+.menu1{
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  position: relative;
+  top:10%;
+}
+.menu2{
+     display: flex;
+     justify-content: space-between;
+     padding: 60px;
+     position: relative;
+     top:10%;
+}
+.menu{
+    text-align: center;
+    border: 2px solid  white;
+    padding: 50px;
+   
+}
+.menu h3{
+    font-size: 25px;
+    margin-top: 10px;
+    color:white
+}
+
+.menu h4{
+    font-size:20px ;
+    margin-top: 10px;
+    color:white;
+}
+
+.menu button{
+    padding:10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bolder;
+    font-size: 15px;
+    background-color: rgb(183, 132, 5);
+    color:white;
+}
+.menu:hover{
+    background-color: white;
+    cursor: pointer;
+    color:black;
+}
+.menu button:hover{
+    background-color: black;
+    color:white;
+    cursor: pointer;
+}
+.menu img:hover{
+    height: 260px;
+    width:260px;
+    transition: 3s;
+   
+}
+.menu:hover h3, .menu:hover h4 {
+    color: black; 
+}
+
+.product-sec{
+    
+    height:100vh;
+}
+.p1{
+    position: relative;
+    display:flex;
+    top:18%;
+    justify-content: space-between;
+    padding: 15px;
+}
+.pro{
+    border: 5px  white solid;
+    text-align: center;
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    color:white;
+}
+.pro:hover{
+    background-color: rgb(183, 132, 5);
+    color:white;
+}
+.pro img,h3,h4{
+    margin-top: 20px;
+}
+
+.product-sec h1{
+    position: relative;
+    text-align: center;
+    top:13%;
+    color:rgb(183, 132, 5);
+}
+
+.review-sec{
+    position: relative;
+    top:28%;
+    height: 120vh;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.customer{
+    position: relative;
+    border: 2px solid white;
+    max-width: 400px;
+    max-height: 400px;
+    padding: 15px;
+    text-align: center;
+    top:28%;
+    color:white;
+    
+}
+.customer p{
+    text-align: justify;
+}
+.customer p,img{
+    margin-top: 15px;
+}
+.customer img{
+    border-radius: 50%;
+}
+.review-sec h1{
+    position: absolute;
+   align-items: center;
+}
+.customer:hover{
+    background-color: rgb(205, 239, 239);
+    color:black;
+}
+.contact-sec{
+    position: relative;
+    height:100vh;
+    top:28%;
+    
+}
+.contact-sec h1{
+    bottom:70px;
+}
+.my-con{
+    position: absolute;
+    bottom:3%;
+    text-align: center;
+    left: 40%;
+   color:white;
+}
+.my-con img{
+    padding:3px;
+}
+ form{
+    position:relative;
+    top:18%;
+    text-align: center;
+   
+}
+form input{
+    margin-top: 20px;
+    width:500px;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 25px;
+    font-weight: bolder;
+    border-color: white;
+}
+form button{
+    width:550px;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bolder;
+    background-color: rgb(183, 132, 5);
+    border-color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+form button:hover{
+    background-color: black;
+    color:white;
+}
+
+
+
+
+
+
+#box{
+    height:100vh;
+    position: relative;
+    top:200px;
+    
+}
+.form{
+   position: relative;
+   top:150px;
+}
+.form h1{
+    font-size: 35px;
+}
+.sub{
+    width:540px;
+}
+#username ,#email, #phone{
+    background-color: honeydew;
+}
+.sub{
+    background-color: lavender;
+}
+.sub:hover{
+    background-color:grey;
+    color:white;
+}
